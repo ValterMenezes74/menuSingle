@@ -1,0 +1,4 @@
+node_modules/
+uploads/
+carousel_data.json
+.env
