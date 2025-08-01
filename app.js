@@ -57,7 +57,8 @@ app.use(session({
   secret: process.env.SESSION_SECRET || 'troque_essa_senha_secreta',
   resave: false,
   saveUninitialized: false,
-  cookie: { httpOnly: true, secure: false } // ajuste secure: true se usar HTTPS
+  cookie: { httpOnly: true, secure: process.env.NODE_ENV === 'production' }
+
 }));
 
 // Credenciais do admin via env
